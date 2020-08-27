@@ -85,3 +85,7 @@
 - 插入
 - 遍历
 ***
+### 16.study_craft,study_craft2
+- 模块的创建及使用
+- Cargo new --lib LibName
+- 配置文件 Cargo.toml
