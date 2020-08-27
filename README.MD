@@ -85,7 +85,10 @@
 - 插入
 - 遍历
 ***
-### 16.study_craft,study_craft2
+### 16.study_craft,study_craft2,study_craft3
 - 模块的创建及使用
 - Cargo new --lib LibName
 - 配置文件 Cargo.toml
+- 模块中的结构体
+- 父模块与子模块的关系及访问
+- as 关键字
