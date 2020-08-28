@@ -37,7 +37,7 @@
 - 字面值就是slice
 - 其他类型slice
 ***
-### 9.stru
+### 9.stru,stru2
 - 定义结构体
 - 创建结构体实例
 - 修改结构体字段
@@ -48,12 +48,10 @@
 - - 圆括号
 - 没有任何字段的类单元结构体
 - 打印结构体
-***
-### 10.stru2
 - 动态方法
 - 静态方法
 ***
-### 11.enum_mode
+### 10.enum_mode
 - CL枚举模式
 - RSL枚举模式
 - 类型不同的枚举（元组）
@@ -61,31 +59,31 @@
 - \* 的用法
 - match 关键字
 ***
-### 12.option
+### 11.option
 - 可空类型
 - 使用match进行判断
 - 使用if进行判断
 ***
-### 13.vector
+### 12.vector
 - 创建Vector
 - 创建带初始值的Vector
 - 读取元素
 - 不可变遍历
 - 可变遍历
 ***
-### 14.string
+### 13.string
 - 创建空的字符串
 - 通过字面值创建字符串
 - 编辑字符串
 - 构造字符串
 - 遍历
 ***
-### 15.hashMap
+### 14.hashMap
 - 创建哈希表
 - 插入
 - 遍历
 ***
-### 16.study_craft,study_craft2,study_craft3.study_craft4
+### 15.study_craft,study_craft2,study_craft3.study_craft4
 - 模块的创建及使用
 - Cargo new --lib LibName
 - 配置文件 Cargo.toml
@@ -93,3 +91,9 @@
 - 父模块与子模块的关系及访问
 - as 关键字
 - 使用外部库
+***
+### 16.err1
+- 错误处理
+- 可恢复错误
+- 不可恢复错误
+- 两种简写方式
