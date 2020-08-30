@@ -4,6 +4,13 @@ pub trait GetInfomation{
     fn get_age(&self) -> &u32;
 }
 
+//特征的默认实现
+pub trait SchoolName{
+    fn get_school_name(&self) -> String{
+        String::from("guangming")
+    }
+}
+
 //实现trait
 #[derive(Debug)]
 pub struct Student{
@@ -18,6 +25,7 @@ impl GetInfomation for Student{
         &self.age
     }
 }
+impl SchoolName for Student{}
 
 #[derive(Debug)]
 pub struct Teacher{
@@ -34,6 +42,12 @@ impl GetInfomation for Teacher{
     }
 }
 
+impl SchoolName for Teacher{
+    fn get_school_name(&self) -> String{
+        String::from("diyi")
+    }
+}
+
 fn print_info(item: impl GetInfomation){
     println!("item: name = {},age = {}",item.get_name(),item.get_age());
 }
@@ -44,6 +58,10 @@ fn main() {
     //println!("student: name = {}, age = {}",s.get_name(),s.get_age());
     //println!("teacher: name = {}, age = {}",t.get_name(),t.get_age());
 
-    print_info(s);
-    print_info(t);
+    //print_info(s);
+    //print_info(t);
+    
+    let s_school_name = s.get_school_name();
+    let t_school_name = t.get_school_name();
+    println!("school name = {},{}",s_school_name,t_school_name);
 }
