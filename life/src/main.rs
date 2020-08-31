@@ -18,6 +18,11 @@ fn main() {
     let n = "Hello".to_string();
     let a = A{name: &n};
     println!("{:#?}",a);
+
+    let a = A{name: &n};
+    println!("{}",a.do_something());
+    println!("{}",a.do_something2(&n));
+    println!("{}",a.do_something3(&n));
 }
 
 // 函数中的生命周期
@@ -48,4 +53,20 @@ fn get_str<'a>(x: &'a str,y: &str) -> &'a str{
 #[derive(Debug)]
 struct A<'a>{
     name: &'a str,
+}
+
+// 方法中的生命周期
+impl<'a> A<'a>{
+    fn do_something(&self) -> i32{
+        3
+    
+    }
+    fn do_something2(&self, s: &str) -> &str{
+        self.name
+    }
+    fn do_something3(&self, s: &'a str) -> &'a str{
+        s
+    }
+
+
 }
