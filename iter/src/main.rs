@@ -40,6 +40,16 @@ fn main() {
     let v1 = vec![1,2,3];
     let v2: Vec<_> = v1.iter().map(|x| x+1).collect();
     println!("{:?}",v2);
+
+    let mut counter = Counter::new();
+    for i in (0..6){
+        if let Some(v) = counter.next(){
+            println!("i = {},v = {}",i,v);
+        }else{
+            println!("i = {},at end",1);
+            break;
+        }
+    }
 }
 
 // trait Iterator{
@@ -47,3 +57,23 @@ fn main() {
 //     fn next(&mut self) -> Option<Self::Item>;
 //     // type Item 和 Self::Item 这种用法叫做定义 trait 的关联类型
 // }
+
+struct Counter{
+    count: u32,
+}
+impl Counter{
+    fn new() -> Counter{
+        Counter {count: 0}
+    }
+}
+impl Iterator for Counter{
+    type Item = u32;
+    fn next(&mut self) -> Option<Self::Item>{
+        self.count += 1;
+        if self.count < 6 {
+            Some(self.count)
+        }else{
+            None
+        }
+    }
+}
